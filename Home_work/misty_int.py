@@ -1,12 +1,17 @@
-# Program misty int
+# Program "misty int"
 # Comp withdraw 1 of 10 misty ints
-# You trying to guess until you made right choise
-# Program print how many tryes you`ve done
+# You trying to guess until you made right choice
+# Program print how many tries you`ve done
 
 import random
 
 rndMistyValue = random.randint(1, 10)
-print('Rnd value =', rndMistyValue)
+print('I`ve chosen an Rnd_Value! Try to guess')
+guessValue = 0
+guessNum = 0
 
-guessValue = input("Try to guess which misty value ?")
-print(guessValue)
+while rndMistyValue != guessValue :
+    guessValue = int(input("Try to guess which misty value ? = "))
+    guessNum += 1
+
+print('Ho ho! You won with {} tries !'.format(guessNum))
