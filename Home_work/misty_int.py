@@ -9,4 +9,4 @@ rndMistyValue = random.randint(1, 10)
 print('Rnd value =', rndMistyValue)
 
 guessValue = input("Try to guess which misty value ?")
-print(guessValue)
+print(guessValue, rndMistyValue)
