@@ -17,4 +17,21 @@ print(str(4 + 1))
 print(str(4) + '1')
 print(str(4), str(None), str(True), str(False), str(object))
 
+# String operations:
+print('123' + '456')
+print('4' * 4)
+
+print('Chars'[0], '123'[1], 'abc'[-1])
+
+# Testing occurrence
+print('be' in 'To bee or not to bee? :) ')
+print('123' in '123')
+print('100' in '200')
+
+print('I am not there' not in 'String')
+
+# String format:
+print('Hello, {}. You are learning {}'.format('User', 'Python'))
+
+
 
