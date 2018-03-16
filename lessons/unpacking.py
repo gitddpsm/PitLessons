@@ -12,3 +12,4 @@ first, *mid, last = 'some letters'
 print(first, mid, last)
 
 # 1:38:39 5-й видос
+
