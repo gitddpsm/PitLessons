@@ -54,8 +54,8 @@ while rndInt != getInputValue:
     getInputValue = getInput()
     if rndInt != getInputValue:
         print('wrong try more!\n============================')
-else:
-    print('Winner! misty word is', wordList[rndInt])
+    else:
+        print('Winner! misty word is', wordList[rndInt])
 
 # printWL into columns
 
