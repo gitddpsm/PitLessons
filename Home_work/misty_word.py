@@ -10,8 +10,8 @@ wordList = ['plane', 'golf', 'girl', 'ball', 'table',
             ]
 
 # rnd list item & var init
-
-rndInt = random.randint(0,len(wordList)-1)
+lastListItem = len(wordList)-1
+rndInt = random.randint(0,lastListItem)
 getInputValue = None
 
 
@@ -25,7 +25,7 @@ def printWL():
     b = 1
     print('Misty word is ?')
     for item in wordList:
-        if item == wordList[(len(wordList)-1)]:
+        if item == wordList[lastListItem]:
             print(b, item)
         if b % 2 != 0:
             pattern = item
@@ -52,8 +52,8 @@ def getInput():
 while rndInt != getInputValue:
     printWL()
     getInputValue = getInput()
-    print('wrong try more!\n============================')
-
+    if rndInt != getInputValue:
+        print('wrong try more!\n============================')
 else:
     print('Winner! misty word is', wordList[rndInt])
 
