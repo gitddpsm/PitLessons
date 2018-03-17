@@ -19,6 +19,7 @@ getInputValue = None
 
 print('deug rnd =',wordList[rndInt])
 
+
 def printWL():
     pattern = None
     b = 1
@@ -32,17 +33,8 @@ def printWL():
             print((b - 1), pattern, ' \t', b, item)
         b += 1
 
-# def getInput():
-#     outVal = None
-#     while outVal == None:
-#         try:
-#             outVal = (abs(int(input('enter guess num: ')))-1)
-#             return int(outVal)
-#         except ValueError:  # string input exception
-#             print('Please enter int')
 
-
-def getinput():
+def getInput():
     outVal = None
     while outVal == None:
         try:
@@ -59,7 +51,7 @@ def getinput():
 
 while rndInt != getInputValue:
     printWL()
-    getInputValue = getinput()
+    getInputValue = getInput()
     print('wrong try more!\n============================')
 
 else:
