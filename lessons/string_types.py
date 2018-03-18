@@ -34,4 +34,5 @@ print('I am not there' not in 'String')
 print('Hello, {}. You are learning {}'.format('User', 'Python'))
 
 
-
+# String length:
+print(len('7 chars'))

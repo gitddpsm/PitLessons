@@ -11,28 +11,46 @@ wordList = ['plane', 'golf', 'girl', 'ball', 'table',
 
 # rnd list item & var init
 lastListItem = len(wordList)-1
-rndInt = random.randint(0,lastListItem)
+rndInt = random.randint(0, lastListItem)
 getInputValue = None
 
 
 # print list items values and let user to guess some
 
-print('deug rnd =',wordList[rndInt])
+print('debug rnd =', wordList[rndInt])
 
 
 def printWL():
-    pattern = None
-    b = 1
-    print('Misty word is ?')
-    for item in wordList:
-        if item == wordList[lastListItem]:
-            print(b, item)
-        if b % 2 != 0:
-            pattern = item
-        else:
-            print((b - 1), pattern, ' \t', b, item)
-        b += 1
-
+    halfwl = 1 + len(wordList) // 2
+    n = 1
+    i = 0
+    while i < (halfwl):
+        try:
+            s_item = wordList[(halfwl + i)]
+            f_item = wordList[i]
+        except:
+            s_item = None
+            print('{}: {}'.format(n, wordList[i]))
+        if s_item != None:
+            if len(f_item) > 8:
+                tabs = ' \t \t'
+            else:
+                tabs = ' \t \t \t'
+            print('{}: {} {} {}: {}'.format(n,f_item, tabs, halfwl + n, s_item))
+        n += 1
+        i += 1
+    # pattern = None
+    # b = 1
+    # print('Misty word is ?')
+    # for item in wordList:
+    #     if item == wordList[lastListItem]:
+    #         print(b, item)
+    #     if b % 2 != 0:
+    #         pattern = item
+    #     else:
+    #         print((b - 1), pattern, ' \t', b, item)
+    #     b += 1
+# EOF printWL
 
 def getInput():
     outVal = None
