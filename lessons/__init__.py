@@ -16,3 +16,5 @@ def getInput():
             print('please enter int')
 
 getInput()
+
+print('4' * 4)
