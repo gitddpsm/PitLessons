@@ -1,31 +1,31 @@
 # вывод в 2 колонки
 
-wordList = ['plane', 'golf', 'girl', 'ball', 'table',
+word_list = ['plane', 'golf', 'girl', 'ball', 'table',
             'string', 'neko', 'helicopter', 'gate',
             'python', 'lamp', 'fork', 'bullet', 'gyroscope',
             'timetodier', 'Word1', 'Word2'
-            ]
+             ]
 
-halfwl = 1 + len(wordList) // 2
-n = 1
-i = 0
+half_list_len = 1 + len(word_list) // 2
+first_word_number = 1
+iteration_counter = 0
 max_item_len = 0
 
-for l in wordList:
-    if max_item_len < len(l):
-        max_item_len = len(l)
+for item in word_list:
+    if max_item_len < len(item):
+        max_item_len = len(item)
 
-while i < (halfwl):
+while iteration_counter < (half_list_len):
     try:
-        s_item = wordList[(halfwl + i)]
-        f_item = wordList[i]
+        second_column_item = word_list[(half_list_len + iteration_counter)]
+        first_column_item = word_list[iteration_counter]
     except:
-        s_item = None
-        print('{}: {}'.format(n, wordList[i]))
-    if s_item != None:
-        var_x = max_item_len - len(f_item)
-        tabs = ' ' * var_x
-        print('{}: {} {} {}: {}'.format(n, f_item, tabs, halfwl + n, s_item))
-    n += 1
-    i += 1
+        second_column_item = None
+        print('{}: {}'.format(first_word_number, word_list[iteration_counter]))
+    if second_column_item != None:
+        space_multiplier = max_item_len - len(first_column_item)
+        tabs = ' ' * space_multiplier
+        print('{}: {} {} {}: {}'.format(first_word_number, first_column_item, tabs, half_list_len + first_word_number, second_column_item))
+    first_word_number += 1
+    iteration_counter += 1
 
