@@ -27,6 +27,11 @@ def setAngle(current, alpha):
         current = 270
     return current
 
+# dict with a number of turn, and arrival cords ?
+
+# turn_history = {0 : pos_x, pos_y, is_visited :   }
+
+# dict with a number of turn, and target cords ?
 
 for act_src in path_src:
     turn = act_src[0]

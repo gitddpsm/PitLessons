@@ -21,9 +21,16 @@ print('debug rnd =', wordList[rndInt])
 
 
 def printWL():
+
     halfwl = 1 + len(wordList) // 2
     n = 1
     i = 0
+    max_item_len = 0
+
+    for l in wordList:
+        if max_item_len < len(l):
+            max_item_len = len(l)
+
     while i < (halfwl):
         try:
             s_item = wordList[(halfwl + i)]
@@ -32,13 +39,30 @@ def printWL():
             s_item = None
             print('{}: {}'.format(n, wordList[i]))
         if s_item != None:
-            if len(f_item) > 8:
-                tabs = ' \t \t'
-            else:
-                tabs = ' \t \t \t'
-            print('{}: {} {} {}: {}'.format(n,f_item, tabs, halfwl + n, s_item))
+            var_x = max_item_len - len(f_item)
+            tabs = ' ' * var_x
+            print('{}: {} {} {}: {}'.format(n, f_item, tabs, halfwl + n, s_item))
         n += 1
         i += 1
+
+    # halfwl = 1 + len(wordList) // 2
+    # n = 1
+    # i = 0
+    # while i < (halfwl):
+    #     try:
+    #         s_item = wordList[(halfwl + i)]
+    #         f_item = wordList[i]
+    #     except:
+    #         s_item = None
+    #         print('{}: {}'.format(n, wordList[i]))
+    #     if s_item != None:
+    #         if len(f_item) > 8:
+    #             tabs = ' \t \t'
+    #         else:
+    #             tabs = ' \t \t \t'
+    #         print('{}: {} {} {}: {}'.format(n,f_item, tabs, halfwl + n, s_item))
+    #     n += 1
+    #     i += 1
     # pattern = None
     # b = 1
     # print('Misty word is ?')
