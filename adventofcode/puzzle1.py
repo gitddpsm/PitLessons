@@ -28,7 +28,8 @@ def setAngle(current, alpha):
     return current
 
 # dict with a number of turn, and arrival cords ?
-# turn_history = {'number', {'location' : {'pos_x': 0, 'pos_y': 0}}, {'visit_num' : 1 }}
+
+# turn_history = {0 : pos_x, pos_y, is_visited :   }
 
 # dict with a number of turn, and target cords ?
 

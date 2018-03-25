@@ -1,0 +1,24 @@
+{
+  "persons": [
+    {
+      "city": "Seattle",
+      "name": "Brian"
+    },
+    {
+      "city": "Amsterdam",
+      "name": "David"
+    }
+  ],
+  "path_map": [
+    {
+      "xy": [0, 0] ,
+      "turn_hist": [ 0, 1, 2]
+
+    },
+    {
+      "xy": [0, 3] ,
+      "turn_hist": [4]
+
+    }
+  ]
+}
