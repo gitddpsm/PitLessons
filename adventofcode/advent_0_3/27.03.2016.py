@@ -237,18 +237,18 @@ wr_dict()
 
 turn_num = 0
 
-aling_app = 0
+aling = 0
 
-def aply_path(aling_app=None):
+def aply_path():
     print(turn_num)
-    print(aling_app)
+    print(aling)
     print('aplypathfunc')
     count = 0
     for item in path_src:
         print(item[0])
         aling_src = item[0]
         if (aling_src == 'L'):
-            aling_app -= 90
+            aling -= 90
             count += 1
         if (aling_src == 'R'):
             aling += 90
@@ -260,6 +260,7 @@ def aply_path(aling_app=None):
         print(item, '=========== WARRRRRP')
          # print(warp_range(aling, range_src, turn_num))
     return aling
+
 print(aling)
 path_src = ('L5', 'R123')
 aply_path()
