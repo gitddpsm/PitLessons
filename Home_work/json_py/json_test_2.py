@@ -3,6 +3,8 @@ import io ,json
 json_data = open('new_data.json').read()
 
 data = json.loads(json_data)
+
+
 print(data)
 print(json.loads(json_data)['persons'][1])
 

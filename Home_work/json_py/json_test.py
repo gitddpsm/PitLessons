@@ -7,7 +7,7 @@ import io ,json
 # строка которую будем парсить
 
 json_string = """ {
-  "orderID": 42,
+  "orderID": 32,
   "customerName": "John Smith",
   "customerPhoneN": "555-1234",
   "orderContents": [
@@ -30,10 +30,11 @@ parsed_string = json.loads(json_string)
 print(parsed_string)
 
 json.dumps(['foo', {'bar': ('baz', None, 1.0, 2 )}]) # console command
-print(json.dumps("\"foo\bar"))
+print(json.dumps('bar'))
+print(json.dumps("\foo\bar"))
 
 data = json_string
 data2 = {'pos_x': 0, 'pos_y': 0, 'turn': {'is_vis': True, 'history': (0)}}
 
-with open('data.json', 'w') as ext_file:
-    json.dump(data, ext_file)
+with open('data2.json', 'w') as ext_file:
+    json.dump(data2, ext_file, sort_keys=True, indent=4)
