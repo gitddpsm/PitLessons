@@ -239,31 +239,31 @@ turn_num = 0
 
 aling = 0
 
-def aply_path():
-    print(turn_num)
-    print(aling)
-    print('aplypathfunc')
-    count = 0
-    for item in path_src:
-        print(item[0])
-        aling_src = item[0]
-        if (aling_src == 'L'):
-            aling -= 90
-            count += 1
-        if (aling_src == 'R'):
-            aling += 90
-            count += 1
-        if aling == 360: aling = 0
-        if aling == -90: aling = 0
-        range_src = (item[1:len(item)])
-        print(count, aling, range_src)
-        print(item, '=========== WARRRRRP')
-         # print(warp_range(aling, range_src, turn_num))
-    return aling
+# def aply_path():
+#     print(turn_num)
+#     # print(aling)
+#     print('aplypathfunc')
+#     count = 0
+#     for item in path_src:
+#         print(item[0])
+#         aling_src = item[0]
+#         if (aling_src == 'L'):
+#             aling -= 90
+#             count += 1
+#         if (aling_src == 'R'):
+#             aling += 90
+#             count += 1
+#         if aling == 360: aling = 0
+#         if aling == -90: aling = 0
+#         range_src = (item[1:len(item)])
+#         print(count, aling, range_src)
+#         print(item, '=========== WARRRRRP')
+#          # print(warp_range(aling, range_src, turn_num))
+#     return aling
 
 print(aling)
 path_src = ('L5', 'R123')
-aply_path()
+# aply_path()
 print(aling)
 
 # , 'L5', 'L1', 'R5', 'R1', 'R1', 'L4', 'L1')
